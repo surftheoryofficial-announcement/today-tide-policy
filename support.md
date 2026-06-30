@@ -21,10 +21,11 @@ description: Public support contact and notices for Today's Tide.
   함께 확인해야 합니다.
 - 홈 화면 위젯의 갱신 시점은 Android 및 iOS 시스템 정책, 네트워크 상태, 공공
   데이터 API 상태에 따라 달라질 수 있습니다.
-- Android와 iOS 광고 활성 릴리스에서는 Google Mobile Ads SDK와 광고 파트너가
-  광고 제공, 측정, 부정 이용 방지를 위해 정보를 처리할 수 있습니다. iOS에서
-  IDFA/App Tracking을 사용하는 광고 구성이 적용되는 경우 Apple의 App Tracking
-  Transparency 흐름과 App Store privacy labels에 맞춰 관리합니다. 실제 광고/분석
-  처리 범위는 공개 개인정보처리방침에 맞춰 관리합니다.
+- 현재 첫 제출 후보는 광고를 표시하지 않는 비광고 release입니다. 광고 영역 코드는
+  향후 활성화를 위해 준비되어 있을 수 있지만, 광고 활성 빌드로 바꾸는 경우 광고 및
+  분석 공지, 개인정보처리방침, Google Play Data safety, App Store privacy labels를
+  실제 바이너리 기준으로 다시 갱신합니다.
+- 광고 및 분석 공지:
+  https://surftheoryofficial-announcement.github.io/today-tide-policy/ads-analytics-notice
 - 개인정보처리방침:
   https://surftheoryofficial-announcement.github.io/today-tide-policy/privacy-policy
