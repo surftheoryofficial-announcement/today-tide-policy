@@ -17,11 +17,16 @@ description: Ads and analytics notice for Today's Tide.
 단위 ID를 사용하며, 앱의 홈 화면 하단 광고 영역에서 광고 요청이 발생할 수
 있습니다.
 
-현재 광고 송출 및 배포 범위에서는 EEA, UK, Switzerland 등 별도 광고 동의 요구
-지역을 제외합니다. 향후 해당 지역 배포 또는 광고 송출을 활성화하는 경우 Google
-EU user consent policy에 맞춰 Android UMP 또는 Google 인증 CMP 흐름을 추가하고,
-본 공지, 개인정보처리방침, Google Play Data safety 답변, App Store App Privacy
-답변을 함께 갱신합니다.
+Google Play의 현재 비공개 테스트 배포 범위는 대한민국으로 제한되어 있습니다.
+Android에서 EEA, UK, Switzerland 등 별도 광고 동의 요구 지역을 열거나 해당
+지역으로 광고 송출을 확장하는 경우 Google EU user consent policy에 맞춰 Android
+UMP 또는 Google 인증 CMP 흐름을 추가하고, 본 공지, 개인정보처리방침, Google Play
+Data safety 답변을 함께 갱신합니다.
+
+iOS 앱은 Google User Messaging Platform을 포함하며, 광고 동의 또는 개인정보 선택
+화면이 필요한 지역에서는 SDK가 제공하는 흐름에 따라 표시될 수 있습니다. App Store
+사용 가능 국가 또는 지역을 제한하는 경우 App Store Connect의 가격 및 사용 가능
+여부 설정을 별도로 관리합니다.
 
 ## Google Mobile Ads
 
