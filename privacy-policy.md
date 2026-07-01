@@ -69,8 +69,10 @@ App Store privacy labels에 맞춰 관리합니다. iOS에서 IDFA, AdSupport,
 AppTrackingTransparency를 사용하는 광고 구성이 적용되는 경우 Apple의 App
 Tracking Transparency 흐름에 따라 별도로 관리합니다. Google Play의 현재 비공개
 테스트 배포 범위는 대한민국으로 제한되어 있습니다. iOS 앱은 Google User
-Messaging Platform을 포함하며, 광고 동의 또는 개인정보 선택 화면이 필요한
-지역에서는 SDK가 제공하는 흐름에 따라 표시될 수 있습니다. iOS 앱의
+Messaging Platform을 포함하지만, 사업자/트레이더 정보가 없어 App Store
+Connect에서 열지 않은 지역은 현재 iOS 배포 및 광고 송출 범위 밖으로 관리합니다.
+해당 지역을 열 경우 App Store Connect 가격 및 사용 가능 여부, App Privacy 답변,
+UMP 동작, 공개 정책 문구를 함께 재확인합니다. iOS 앱의
 `AppAnalytics`는 `ANALYTICS_ENABLED` 설정과 Firebase 설정 파일이 있는 경우
 Firebase Analytics로 이벤트를 전송하며, Firebase가 자동 수집하는 `app_open`
 이벤트는 중복 전송하지 않습니다.
