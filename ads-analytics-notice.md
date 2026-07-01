@@ -23,10 +23,11 @@ Android에서 EEA, UK, Switzerland 등 별도 광고 동의 요구 지역을 열
 UMP 또는 Google 인증 CMP 흐름을 추가하고, 본 공지, 개인정보처리방침, Google Play
 Data safety 답변을 함께 갱신합니다.
 
-iOS 앱은 Google User Messaging Platform을 포함하며, 광고 동의 또는 개인정보 선택
-화면이 필요한 지역에서는 SDK가 제공하는 흐름에 따라 표시될 수 있습니다. App Store
-사용 가능 국가 또는 지역을 제한하는 경우 App Store Connect의 가격 및 사용 가능
-여부 설정을 별도로 관리합니다.
+iOS 앱은 Google User Messaging Platform을 포함하지만, UMP SDK 포함이 모든 지역
+출시를 의미하지는 않습니다. 사업자/트레이더 정보가 없어 App Store Connect에서
+열지 않은 지역은 현재 iOS 배포 및 광고 송출 범위 밖으로 관리합니다. 해당 지역을
+열 경우 App Store Connect의 가격 및 사용 가능 여부, App Privacy 답변, UMP 동작,
+공개 정책 문구를 함께 재확인합니다.
 
 ## Google Mobile Ads
 
