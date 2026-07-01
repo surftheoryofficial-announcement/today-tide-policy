@@ -5,30 +5,41 @@ description: Ads and analytics notice for Today's Tide.
 
 # 광고 및 분석 공지
 
-최종 업데이트: 2026년 6월 30일
+최종 업데이트: 2026년 7월 1일
 
-이 문서는 `오늘의 간만조` / `Today's Tide` 앱의 광고 및 분석 처리 상태를 설명합니다.
+이 문서는 `오늘의 간만조` / `Today's Tide` 앱의 광고 및 분석 처리 상태를
+설명합니다.
 
-## 현재 첫 제출 후보 상태
+## 현재 광고 송출 상태
 
-현재 첫 제출 후보는 비광고 release입니다. 앱 안에는 향후 광고 활성화를 위한 기능
-코드나 화면 영역이 준비되어 있을 수 있지만, 아래 조건을 만족하는 제출 빌드는
-`광고 없음` 후보로 관리합니다.
+현재 Android와 iOS 앱은 Google Mobile Ads SDK 기반 홈 화면 배너 광고를 표시할 수
+있는 광고 활성 릴리스로 운영됩니다. Android와 iOS 모두 실제 AdMob 앱 ID와 광고
+단위 ID를 사용하며, 앱의 홈 화면 하단 광고 영역에서 광고 요청이 발생할 수
+있습니다.
 
-- 현재 제출 후보에서는 사용자에게 광고를 표시하지 않습니다.
-- Android release 산출물에는 Google Mobile Ads SDK runtime, Android Advertising ID
-  권한, Android Ad Services 권한, AdMob application metadata를 포함하지 않는 방향으로
-  검증합니다.
-- iOS release 후보는 Google Mobile Ads SDK를 링크하지 않고,
-  `GADApplicationIdentifier`, `SKAdNetworkItems`, IDFA, App Tracking Transparency
-  직접 사용 없이 제출하는 방향으로 검증합니다.
-- Google Play의 광고 포함 여부와 App Store의 Tracking/Data Used to Track You 답변은
-  실제 제출 바이너리와 콘솔 SDK 안내를 기준으로 최종 확인합니다.
+현재 광고 송출 및 배포 범위에서는 EEA, UK, Switzerland 등 별도 광고 동의 요구
+지역을 제외합니다. 향후 해당 지역 배포 또는 광고 송출을 활성화하는 경우 Google
+EU user consent policy에 맞춰 Android UMP 또는 Google 인증 CMP 흐름을 추가하고,
+본 공지, 개인정보처리방침, Google Play Data safety 답변, App Store App Privacy
+답변을 함께 갱신합니다.
 
-광고 UI만 숨겼더라도 release 산출물에 광고 SDK나 광고 식별자 관련 권한이 포함되는
-경우에는 SDK가 처리할 수 있는 데이터가 Google Play Data safety 또는 App Store App
-Privacy 답변에 영향을 줄 수 있습니다. 이 경우 광고가 화면에 보이지 않더라도 최종
-바이너리와 스토어 콘솔 안내를 기준으로 보수적으로 다시 고지합니다.
+## Google Mobile Ads
+
+광고가 표시되는 릴리스에서는 Google Mobile Ads SDK 및 광고 파트너가 광고 제공,
+측정, 부정 이용 방지, 광고 품질 관리를 위해 정보를 처리할 수 있습니다. 처리될 수
+있는 정보에는 앱 상호작용, 진단 정보, 기기 또는 앱 식별자, IP 주소 등 일반적인
+기술 정보가 포함될 수 있습니다.
+
+Android 릴리스는 Google Mobile Ads SDK, AdMob application metadata, Android
+Advertising ID 권한을 포함합니다. iOS 릴리스는 Google Mobile Ads SDK, Google User
+Messaging Platform, `GADApplicationIdentifier`, Google Mobile Ads
+`SKAdNetworkItems`를 포함합니다.
+
+iOS 앱은 현재 `AdSupport`, `AppTrackingTransparency`,
+`advertisingIdentifier`, `NSUserTrackingUsageDescription` 직접 사용 없이 관리합니다.
+향후 IDFA 또는 App Tracking Transparency 흐름을 사용하는 광고 구성이 적용되는
+경우 Apple의 App Tracking Transparency 흐름과 App Store privacy labels에 맞춰
+별도로 갱신합니다.
 
 ## Firebase Analytics
 
@@ -42,22 +53,12 @@ Privacy 답변에 영향을 줄 수 있습니다. 이 경우 광고가 화면에
 Firebase Analytics 및 Google Analytics 처리 범위는 Google Play Data safety,
 App Store privacy labels, 공개 개인정보처리방침과 일치하도록 관리합니다.
 
-## 향후 광고 활성 빌드
+## app-ads.txt
 
-나중에 광고를 활성화하는 빌드를 제공하는 경우, 실제 광고 SDK 포함 여부와 광고
-설정에 맞춰 다음 항목을 다시 갱신합니다.
-
-- 이 광고 및 분석 공지
-- 개인정보처리방침
-- Google Play Data safety 답변
-- App Store App Privacy 답변
-- iOS IDFA/App Tracking Transparency 사용 여부
-- Android Advertising ID 및 Android Ad Services 권한 포함 여부
-
-광고 활성 빌드에서는 Google Mobile Ads SDK 및 광고 파트너가 광고 제공, 측정,
-부정 이용 방지를 위해 정보를 처리할 수 있습니다. iOS에서 IDFA/App Tracking을
-사용하는 광고 구성이 적용되는 경우 Apple의 App Tracking Transparency 흐름에 따라
-별도로 관리합니다.
+AdMob `app-ads.txt`는 GitHub Pages 개발자 웹사이트에 게시된 상태로 관리합니다.
+AdMob은 스토어에 등록된 개발자 웹사이트의 host를 기준으로
+`https://<host>/app-ads.txt` 위치를 크롤링하므로, 스토어 개발자 웹사이트 URL과
+AdMob의 app-ads.txt 확인 상태를 함께 관리합니다.
 
 ## 관련 문서
 
@@ -68,10 +69,14 @@ App Store privacy labels, 공개 개인정보처리방침과 일치하도록 관
 
 ## 참고한 플랫폼 기준
 
-- Google Play Advertising ID:
-  https://support.google.com/googleplay/android-developer/answer/6048248
-- Google Mobile Ads SDK Android setup:
-  https://developers.google.com/admob/android/quick-start
+- Google Play Data safety:
+  https://support.google.com/googleplay/android-developer/answer/10787469
+- Google Mobile Ads SDK Android data disclosure:
+  https://developers.google.com/admob/android/privacy/play-data-disclosure
+- Google Mobile Ads SDK iOS data disclosure:
+  https://developers.google.com/admob/ios/privacy/data-disclosure
+- Google AdMob app-ads.txt:
+  https://support.google.com/admob/answer/9363762
 - Apple App Privacy Details:
   https://developer.apple.com/app-store/app-privacy-details/
 - Apple User Privacy and Data Use:
